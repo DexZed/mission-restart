@@ -100,7 +100,7 @@ function statusChecker(status) {
     case "Open":
       return (
         <>
-          <span className="badge badge-xs badge-accent font-bold">
+          <span className="badge badge-xs badge-accent font-bold badge-outline">
             <span className="w-2 h-2 rounded-full bg-emerald-200"></span>{status}
           </span>
         </>
@@ -108,7 +108,7 @@ function statusChecker(status) {
     case "In-Progress":
       return (
         <>
-          <span className="badge badge-xs badge-warning font-bold">
+          <span className="badge badge-xs badge-warning font-bold badge-outline">
             <span className="w-2 h-2 rounded-full bg-amber-200"></span>{status}
           </span>
         </>
