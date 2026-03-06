@@ -1,6 +1,13 @@
 import { BehaviorSubject } from "rxjs";
 import { useEffect, useState } from "react";
 
+const initialState = {
+  tickets: [],
+  selectedTicket: null,
+  resolvedTickets: [],
+  selectedTickets: [],
+};
+
 class TicketStore {
   state$;
   static instance;
