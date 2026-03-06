@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react";
 
 function Nav() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
-  // Load theme from local storage on initial render
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "light";
     setTheme(savedTheme);
     document.documentElement.setAttribute("data-theme", savedTheme);
   }, []);
 
-  // Toggle theme and save it to local storage
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
@@ -109,10 +107,7 @@ function Nav() {
             {links}
             <li>
               <a className="btn btn-ghost btn-outline bg-[linear-gradient(125.04deg,#632EE3_5.68%,#9F62F2_88.38%)] rounded-xl border-[#9F62F2] border-2">
-                <div className="flex gap-2 justify-center items-center">
-                  <span className="font-bold text-xl text-white ">+</span>
-                  <span className="text-white ">New Ticket</span>
-                </div>
+                <span className="text-white text-md">+ New Ticket</span>
               </a>
             </li>
           </ul>

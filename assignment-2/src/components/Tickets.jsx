@@ -101,7 +101,7 @@ function statusChecker(status) {
       return (
         <>
           <span className="badge badge-xs badge-accent font-bold">
-            {status}
+            <span className="w-2 h-2 rounded-full bg-emerald-200"></span>{status}
           </span>
         </>
       );
@@ -109,7 +109,7 @@ function statusChecker(status) {
       return (
         <>
           <span className="badge badge-xs badge-warning font-bold">
-            {status}
+            <span className="w-2 h-2 rounded-full bg-amber-200"></span>{status}
           </span>
         </>
       );
